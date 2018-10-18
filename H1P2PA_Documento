@@ -1,0 +1,22 @@
+En esta actividad es en parejas se solicita lo siguiente.
+El programa thread4.c muestra el uso de semaforos en un problema de productor consumidor.
+Define que es un semaforo. documenta el uso de sem_post y sem_wait. tu respuesta usando MLA
+
+sem_post() incrementa o “desbloquea” el semaforo al que sem se refiere.
+sem_wait() decrememta o “bloquea” el semaforo al que sem se refiere.
+
+modifique el programa contador.c   para que use este modelo con 1 hilo adicional. Use el comando time para medir el tiempo de ejecucion.
+
+
+modifique su codigo para que use 4 hilos en total. # que hagan sem_post y uno que sea el sem_wait. Use el comando time para medir el tiempo de ejecucion.
+
+
+¿Es más rapido que el serial? Especule sobre posibles razones
+
+En este caso en específico no es más rápido el serial, puesto que es una actividad bastante sencilla que no se beneficia de la ejecución en paralelo. Pero el ejemplo muestra que se puede agilizar un proceso por medio de la ejecución en paralelo.
+
+Tenemos un programa thread4a.c
+
+Explique cual es el comportamiento anómalo. Explique por que apaprece 3 veces el mensaje. Indique por que el numero de caracteres es 8.
+
+El comportamiento anómalo del programa thread4ac.c es la aparicion de mensajes consecutivos donde no deberia de aparecer. El numero de caracteres es 8 porque corresponde a lo que ocupa el “work_area”, que es el string “Wheeee…”, que constituye 9 caracteres y un valor de 9, al que se le resta 1 en la linea 54 del programa, resultando en una medida de 8 caracteres segun thread_function.
