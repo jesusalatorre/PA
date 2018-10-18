@@ -29,8 +29,8 @@ int main() {
 
   printf("Thread joined, it returned %s\n", (char *)thread_result);
   printf("Message is now %s\n", message);
-  printf("Jose Eduardo Sanchez\n");
-  printf("A01280276\n");
+  printf("Jesus Alatorre\n");
+  printf("A00819508\n");
   exit(EXIT_SUCCESS);
 }
 
